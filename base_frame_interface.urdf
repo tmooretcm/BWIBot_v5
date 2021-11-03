@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="base_frame_interface">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.00599227552650991 -0.261198207608213 0.094236791516591"
+        rpy="0 0 0" />
+      <mass
+        value="16.7461725756636" />
+      <inertia
+        ixx="0.186915381099482"
+        ixy="4.60256379195456E-05"
+        ixz="0.000669416419663758"
+        iyy="0.226338974219915"
+        iyz="0.00400928228663316"
+        izz="0.108792046303511" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://base_frame_interface/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://base_frame_interface/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="hokuyo">
+    <inertial>
+      <origin
+        xyz="0.133584074211728 0.202324368680826 0.204105336507967"
+        rpy="0 0 0" />
+      <mass
+        value="0.652167585839582" />
+      <inertia
+        ixx="0.00157050335763022"
+        ixy="1.74853977399192E-06"
+        ixz="3.70456316395289E-08"
+        iyy="0.00157786080287871"
+        iyz="-1.22184572203833E-07"
+        izz="0.000194017970807751" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://base_frame_interface/meshes/hokuyo.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://base_frame_interface/meshes/hokuyo.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base_to_hokuyo"
+    type="fixed">
+    <origin
+      xyz="-0.18441954955791 0.166823883869328 -0.206960021156072"
+      rpy="1.5707963267949 0 1.5707963267949" />
+    <parent
+      link="base_link" />
+    <child
+      link="hokuyo" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
